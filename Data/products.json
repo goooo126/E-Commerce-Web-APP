@@ -165,7 +165,7 @@
     "name": "Women Blouse",
     "categoryId": "cat_002",
     "price": 45,
-    "imageUrl":"assets/images/clothing/Women Blouse.jpg",
+    "imageUrl": "assets/images/clothing/Women Blouse.jpg",
     "stockQuantity": 34,
     "description": "Casual women blouse.",
     "createdAt": "2026-01-20"
@@ -175,7 +175,7 @@
     "name": "Sports Shorts",
     "categoryId": "cat_002",
     "price": 30,
-    "imageUrl":"assets/images/clothing/Sports Shorts.jpg",
+    "imageUrl": "assets/images/clothing/Sports Shorts.jpg",
     "stockQuantity": 50,
     "description": "Comfortable sports shorts.",
     "createdAt": "2026-01-20"
@@ -185,7 +185,7 @@
     "name": "Winter Jacket",
     "categoryId": "cat_002",
     "price": 120,
-    "imageUrl":"assets/images/clothing/Winter Jacket.jpg",
+    "imageUrl": "assets/images/clothing/Winter Jacket.jpg",
     "stockQuantity": 15,
     "description": "Heavy winter jacket.",
     "createdAt": "2026-01-20"
@@ -195,7 +195,7 @@
     "name": "Casual Sneakers",
     "categoryId": "cat_002",
     "price": 85,
-    "imageUrl":"assets/images/clothing/Casual Sneakers.jpg",
+    "imageUrl": "assets/images/clothing/Casual Sneakers.jpg",
     "stockQuantity": 22,
     "description": "Everyday casual sneakers.",
     "createdAt": "2026-01-20"
@@ -206,7 +206,7 @@
     "name": "Washing Machine",
     "categoryId": "cat_003",
     "price": 600,
-    "imageUrl":"assets/images/home_appliances/Washing Machine.jpg",
+    "imageUrl": "assets/images/home_appliances/Washing Machine.jpg",
     "stockQuantity": 7,
     "description": "Automatic washing machine.",
     "createdAt": "2026-01-20"
@@ -216,7 +216,7 @@
     "name": "Refrigerator",
     "categoryId": "cat_003",
     "price": 900,
-    "imageUrl":"assets/images/home_appliances/Refrigerator.jpg",
+    "imageUrl": "assets/images/home_appliances/Refrigerator.jpg",
     "stockQuantity": 5,
     "description": "Large capacity refrigerator.",
     "createdAt": "2026-01-20"
@@ -226,7 +226,7 @@
     "name": "Microwave Oven",
     "categoryId": "cat_003",
     "price": 220,
-    "imageUrl":"assets/images/home_appliances/Microwave Oven.jpg",
+    "imageUrl": "assets/images/home_appliances/Microwave Oven.jpg",
     "stockQuantity": 12,
     "description": "Fast heating microwave oven.",
     "createdAt": "2026-01-20"
@@ -236,7 +236,7 @@
     "name": "Air Fryer",
     "categoryId": "cat_003",
     "price": 180,
-    "imageUrl":"assets/images/home_appliances/Air Fryer.jpg",
+    "imageUrl": "assets/images/home_appliances/Air Fryer.jpg",
     "stockQuantity": 15,
     "description": "Healthy air frying appliance.",
     "createdAt": "2026-01-20"
@@ -246,7 +246,7 @@
     "name": "Vacuum Cleaner",
     "categoryId": "cat_003",
     "price": 250,
-    "imageUrl":"assets/images/home_appliances/Vacuum Cleaner.jpg",
+    "imageUrl": "assets/images/home_appliances/Vacuum Cleaner.jpg",
     "stockQuantity": 18,
     "description": "Powerful vacuum cleaner.",
     "createdAt": "2026-01-20"
@@ -256,7 +256,7 @@
     "name": "Blender",
     "categoryId": "cat_003",
     "price": 90,
-    "imageUrl":"assets/images/home_appliances/Blender.jpg",
+    "imageUrl": "assets/images/home_appliances/Blender.jpg",
     "stockQuantity": 30,
     "description": "Kitchen blender for smoothies.",
     "createdAt": "2026-01-20"
@@ -266,7 +266,7 @@
     "name": "Electric Kettle",
     "categoryId": "cat_003",
     "price": 45,
-    "imageUrl":"assets/images/home_appliances/Electric Kettle.jpg",
+    "imageUrl": "assets/images/home_appliances/Electric Kettle.jpg",
     "stockQuantity": 40,
     "description": "Fast boiling electric kettle.",
     "createdAt": "2026-01-20"
@@ -276,7 +276,7 @@
     "name": "Coffee Maker",
     "categoryId": "cat_003",
     "price": 150,
-    "imageUrl":"assets/images/home_appliances/Coffee Maker.jpg",
+    "imageUrl": "assets/images/home_appliances/Coffee Maker.jpg",
     "stockQuantity": 20,
     "description": "Automatic coffee machine.",
     "createdAt": "2026-01-20"
@@ -286,7 +286,7 @@
     "name": "Electric Fan",
     "categoryId": "cat_003",
     "price": 70,
-    "imageUrl":"assets/images/home_appliances/Electric Fan.jpg",
+    "imageUrl": "assets/images/home_appliances/Electric Fan.jpg",
     "stockQuantity": 25,
     "description": "Silent electric fan.",
     "createdAt": "2026-01-20"
@@ -296,7 +296,7 @@
     "name": "Room Heater",
     "categoryId": "cat_003",
     "price": 130,
-    "imageUrl":"assets/images/home_appliances/Room Heater.jpg",
+    "imageUrl": "assets/images/home_appliances/Room Heater.jpg",
     "stockQuantity": 10,
     "description": "Electric room heater.",
     "createdAt": "2026-01-20"
@@ -307,7 +307,7 @@
     "name": "Clean Code",
     "categoryId": "cat_004",
     "price": 35,
-    "imageUrl":"assets/images/books/Clean Code.jpg",
+    "imageUrl": "assets/images/books/Clean Code.jpg",
     "stockQuantity": 30,
     "description": "A handbook of agile software craftsmanship.",
     "createdAt": "2026-01-20"
@@ -317,7 +317,7 @@
     "name": "JavaScript The Good Parts",
     "categoryId": "cat_004",
     "price": 28,
-    "imageUrl":"assets/images/books/JavaScript The Good Parts.jpg",
+    "imageUrl": "assets/images/books/JavaScript The Good Parts.jpg",
     "stockQuantity": 25,
     "description": "Best practices in JavaScript.",
     "createdAt": "2026-01-20"
@@ -327,7 +327,7 @@
     "name": "You Don't Know JS",
     "categoryId": "cat_004",
     "price": 32,
-    "imageUrl":"assets/images/books/You Don't Know JS.jpg",
+    "imageUrl": "assets/images/books/You Don't Know JS.jpg",
     "stockQuantity": 22,
     "description": "Deep dive into JavaScript.",
     "createdAt": "2026-01-20"
@@ -337,6 +337,7 @@
     "name": "Atomic Habits",
     "categoryId": "cat_004",
     "price": 26,
+    "imageUrl": "assets/images/books/Atomic Habits.jpg",
     "stockQuantity": 40,
     "description": "Proven way to build good habits.",
     "createdAt": "2026-01-20"
@@ -346,6 +347,7 @@
     "name": "Deep Work",
     "categoryId": "cat_004",
     "price": 29,
+    "imageUrl": "assets/images/books/Deep Work.jpg",
     "stockQuantity": 35,
     "description": "Rules for focused success.",
     "createdAt": "2026-01-20"
@@ -355,6 +357,7 @@
     "name": "The Pragmatic Programmer",
     "categoryId": "cat_004",
     "price": 38,
+    "imageUrl": "assets/images/books/The Pragmatic Programmer.jpg",
     "stockQuantity": 18,
     "description": "Classic programming guide.",
     "createdAt": "2026-01-20"
@@ -364,6 +367,7 @@
     "name": "Eloquent JavaScript",
     "categoryId": "cat_004",
     "price": 34,
+    "imageUrl": "assets/images/books/Eloquent JavaScript.jpg",
     "stockQuantity": 20,
     "description": "Modern JavaScript programming.",
     "createdAt": "2026-01-20"
@@ -373,6 +377,7 @@
     "name": "Start With Why",
     "categoryId": "cat_004",
     "price": 27,
+    "imageUrl": "assets/images/books/Start With Why.jpg",
     "stockQuantity": 33,
     "description": "Leadership and inspiration.",
     "createdAt": "2026-01-20"
@@ -382,6 +387,7 @@
     "name": "Rich Dad Poor Dad",
     "categoryId": "cat_004",
     "price": 24,
+    "imageUrl": "assets/images/books/Rich Dad Poor Dad.jpg",
     "stockQuantity": 45,
     "description": "Financial education fundamentals.",
     "createdAt": "2026-01-20"
@@ -391,6 +397,7 @@
     "name": "Think and Grow Rich",
     "categoryId": "cat_004",
     "price": 23,
+    "imageUrl": "assets/images/books/Think and Grow Rich.jpg",
     "stockQuantity": 50,
     "description": "Success mindset classic.",
     "createdAt": "2026-01-20"
@@ -401,6 +408,7 @@
     "name": "Smart Watch",
     "categoryId": "cat_006",
     "price": 200,
+    "imageUrl": "assets/images/accessories/Smart Watch.jpg",
     "stockQuantity": 16,
     "description": "Health and fitness smartwatch.",
     "createdAt": "2026-01-20"
@@ -410,6 +418,7 @@
     "name": "Wireless Headphones",
     "categoryId": "cat_006",
     "price": 120,
+    "imageUrl": "assets/images/accessories/Wireless Headphones.jpg",
     "stockQuantity": 22,
     "description": "Noise cancelling headphones.",
     "createdAt": "2026-01-20"
@@ -419,6 +428,7 @@
     "name": "Laptop Backpack",
     "categoryId": "cat_006",
     "price": 55,
+    "imageUrl": "assets/images/accessories/Laptop Backpack.jpg",
     "stockQuantity": 30,
     "description": "Durable laptop backpack.",
     "createdAt": "2026-01-20"
@@ -428,6 +438,7 @@
     "name": "Mechanical Keyboard",
     "categoryId": "cat_006",
     "price": 90,
+    "imageUrl": "assets/images/accessories/Mechanical Keyboard.jpg",
     "stockQuantity": 18,
     "description": "RGB mechanical keyboard.",
     "createdAt": "2026-01-20"
@@ -437,6 +448,7 @@
     "name": "Wireless Mouse",
     "categoryId": "cat_006",
     "price": 25,
+    "imageUrl": "assets/images/accessories/Wireless Mouse.jpg",
     "stockQuantity": 40,
     "description": "Ergonomic wireless mouse.",
     "createdAt": "2026-01-20"
@@ -446,6 +458,7 @@
     "name": "Phone Case",
     "categoryId": "cat_006",
     "price": 15,
+    "imageUrl": "assets/images/accessories/Phone Case.jpg",
     "stockQuantity": 70,
     "description": "Shockproof phone case.",
     "createdAt": "2026-01-20"
@@ -455,6 +468,7 @@
     "name": "Power Bank",
     "categoryId": "cat_006",
     "price": 40,
+    "imageUrl": "assets/images/accessories/Power Bank.jpg",
     "stockQuantity": 33,
     "description": "Fast charging power bank.",
     "createdAt": "2026-01-20"
@@ -464,6 +478,7 @@
     "name": "USB-C Hub",
     "categoryId": "cat_006",
     "price": 60,
+    "imageUrl": "assets/images/accessories/USB-C Hub.jpg",
     "stockQuantity": 21,
     "description": "Multi-port USB-C hub.",
     "createdAt": "2026-01-20"
@@ -473,6 +488,7 @@
     "name": "Webcam HD",
     "categoryId": "cat_006",
     "price": 75,
+    "imageUrl": "assets/images/accessories/Webcam HD.jpg",
     "stockQuantity": 19,
     "description": "HD webcam for video calls.",
     "createdAt": "2026-01-20"
@@ -482,6 +498,7 @@
     "name": "Gaming Headset",
     "categoryId": "cat_006",
     "price": 110,
+    "imageUrl": "assets/images/accessories/Gaming Headset.jpg",
     "stockQuantity": 17,
     "description": "Surround sound gaming headset.",
     "createdAt": "2026-01-20"
