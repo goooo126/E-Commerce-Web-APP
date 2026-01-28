@@ -1,13 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root{
-    --body-color: #18191A;
-    --sidebar-color: #242526;
-    --primary-color: #3A3B3C;
-    --primary-color-light: #3A3B3C;
-    --text-color: #ccc;
+:root {
+  --sidebar-color: #FBF6F6;        
+  --body-color: #ffffff;   
+  --primary-color: #e8dede;   
+  --primary-color-light: #f3ecec;
+  --text-color: #4a4a4a;    
+  --logo-color: #7065f5; 
+  --danger-color: #d94a4a;      
 }
 
-body{
-    height: 100vh;
-    background-color: var(--body-color);
+/* :root {
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3cba;
+  --text-color: #ccc;
+  --logo-color: #7065f5;
+  --danger-color: #ef4444;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins,sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--body-color);
+  display: flex;
+  align-items: start;
+  color: var(--text-color);
+}
+
+.sidebar {
+  width: 15%;
+  height: 100vh;
+  background-color: var(--sidebar-color);
+}
+
+.sidebar .logo {
+  text-align: center;
+  padding: 12px 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  font-size: 2rem;
+  color: var(--logo-color);
+}
+
+.taps {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.tap {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  transition: all 300ms ease;
+  position: relative;
+}
+
+.tap .icon {
+  margin-right: 30px;
+}
+
+.tap:hover {
+  background-color: var(--primary-color-light);
+  color: var(--logo-color);
+  cursor: pointer;
+}
+
+.tap:hover::after {
+  content: '';
+  width: 6px;
+  height: 100%;
+  background-color: var(--logo-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#logout{
+    margin-top: 350px;
+    transition: all 300ms ease;
+}
+
+#logout:hover{
+    background-color: var(--primary-color-light);
+  color: var(--danger-color);
+  cursor: pointer;
+}
+
+#logout:hover::after {
+  content: '';
+  width: 6px;
+  height: 100%;
+  background-color: var(--danger-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.content{
+    padding: 25px;
 }
