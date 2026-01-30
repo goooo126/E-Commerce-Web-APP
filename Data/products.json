@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": "prod_e_01",
+      "id": "1",
       "name": "iPhone 14 Pro",
       "categoryId": "cat_001",
       "price": 1100,
@@ -11,7 +11,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_e_02",
+      "id": "2",
       "name": "Samsung Galaxy S23",
       "categoryId": "cat_001",
       "price": 950,
@@ -21,7 +21,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_e_03",
+      "id": "3",
       "name": "MacBook Air M2",
       "categoryId": "cat_001",
       "price": 1400,
@@ -31,7 +31,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_e_04",
+      "id": "4",
       "name": "Dell XPS 13",
       "categoryId": "cat_001",
       "price": 1250,
@@ -41,7 +41,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_e_05",
+      "id": "5",
       "name": "iPad Pro",
       "categoryId": "cat_001",
       "price": 900,
@@ -51,7 +51,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_e_06",
+      "id": "6",
       "name": "Smart TV 55 Inch",
       "categoryId": "cat_001",
       "price": 700,
@@ -61,7 +61,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_e_07",
+      "id": "7",
       "name": "PlayStation 5",
       "categoryId": "cat_001",
       "price": 600,
@@ -71,7 +71,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_e_08",
+      "id": "8",
       "name": "Canon DSLR Camera",
       "categoryId": "cat_001",
       "price": 850,
@@ -81,7 +81,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_e_09",
+      "id": "9",
       "name": "Bluetooth Speaker",
       "categoryId": "cat_001",
       "price": 120,
@@ -91,7 +91,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_e_10",
+      "id": "10",
       "name": "Wireless Earbuds",
       "categoryId": "cat_001",
       "price": 130,
@@ -100,9 +100,8 @@
       "description": "True wireless earbuds with charging case.",
       "createdAt": "2026-01-20"
     },
-
     {
-      "id": "prod_c_01",
+      "id": "11",
       "name": "Men Cotton T-Shirt",
       "categoryId": "cat_002",
       "price": 25,
@@ -112,7 +111,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_c_02",
+      "id": "12",
       "name": "Women Denim Jacket",
       "categoryId": "cat_002",
       "price": 80,
@@ -122,7 +121,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_c_03",
+      "id": "13",
       "name": "Running Shoes",
       "categoryId": "cat_002",
       "price": 95,
@@ -132,7 +131,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_c_04",
+      "id": "14",
       "name": "Men Hoodie",
       "categoryId": "cat_002",
       "price": 55,
@@ -142,7 +141,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_c_05",
+      "id": "15",
       "name": "Women Summer Dress",
       "categoryId": "cat_002",
       "price": 65,
@@ -152,7 +151,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_c_06",
+      "id": "16",
       "name": "Men Jeans",
       "categoryId": "cat_002",
       "price": 70,
@@ -162,7 +161,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_c_07",
+      "id": "17",
       "name": "Women Blouse",
       "categoryId": "cat_002",
       "price": 45,
@@ -172,7 +171,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_c_08",
+      "id": "18",
       "name": "Sports Shorts",
       "categoryId": "cat_002",
       "price": 30,
@@ -182,7 +181,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_c_09",
+      "id": "19",
       "name": "Winter Jacket",
       "categoryId": "cat_002",
       "price": 120,
@@ -192,7 +191,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_c_10",
+      "id": "20",
       "name": "Casual Sneakers",
       "categoryId": "cat_002",
       "price": 85,
@@ -201,9 +200,8 @@
       "description": "Everyday casual sneakers.",
       "createdAt": "2026-01-20"
     },
-
     {
-      "id": "prod_h_01",
+      "id": "21",
       "name": "Washing Machine",
       "categoryId": "cat_003",
       "price": 600,
@@ -213,7 +211,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_h_02",
+      "id": "22",
       "name": "Refrigerator",
       "categoryId": "cat_003",
       "price": 900,
@@ -223,7 +221,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_h_03",
+      "id": "23",
       "name": "Microwave Oven",
       "categoryId": "cat_003",
       "price": 220,
@@ -233,7 +231,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_h_04",
+      "id": "24",
       "name": "Air Fryer",
       "categoryId": "cat_003",
       "price": 180,
@@ -243,7 +241,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_h_05",
+      "id": "25",
       "name": "Vacuum Cleaner",
       "categoryId": "cat_003",
       "price": 250,
@@ -253,7 +251,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_h_06",
+      "id": "26",
       "name": "Blender",
       "categoryId": "cat_003",
       "price": 90,
@@ -263,7 +261,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_h_07",
+      "id": "27",
       "name": "Electric Kettle",
       "categoryId": "cat_003",
       "price": 45,
@@ -273,7 +271,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_h_08",
+      "id": "28",
       "name": "Coffee Maker",
       "categoryId": "cat_003",
       "price": 150,
@@ -283,7 +281,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_h_09",
+      "id": "29",
       "name": "Electric Fan",
       "categoryId": "cat_003",
       "price": 70,
@@ -293,7 +291,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_h_10",
+      "id": "30",
       "name": "Room Heater",
       "categoryId": "cat_003",
       "price": 130,
@@ -302,9 +300,8 @@
       "description": "Electric room heater.",
       "createdAt": "2026-01-20"
     },
-
     {
-      "id": "prod_b_01",
+      "id": "31",
       "name": "Clean Code",
       "categoryId": "cat_004",
       "price": 35,
@@ -314,7 +311,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_b_02",
+      "id": "32",
       "name": "JavaScript The Good Parts",
       "categoryId": "cat_004",
       "price": 28,
@@ -324,7 +321,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_b_03",
+      "id": "33",
       "name": "You Don't Know JS",
       "categoryId": "cat_004",
       "price": 32,
@@ -334,7 +331,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_b_04",
+      "id": "34",
       "name": "Atomic Habits",
       "categoryId": "cat_004",
       "price": 26,
@@ -344,7 +341,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_b_05",
+      "id": "35",
       "name": "Deep Work",
       "categoryId": "cat_004",
       "price": 29,
@@ -354,7 +351,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_b_06",
+      "id": "36",
       "name": "The Pragmatic Programmer",
       "categoryId": "cat_004",
       "price": 38,
@@ -364,7 +361,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_b_07",
+      "id": "37",
       "name": "Eloquent JavaScript",
       "categoryId": "cat_004",
       "price": 34,
@@ -374,7 +371,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_b_08",
+      "id": "38",
       "name": "Start With Why",
       "categoryId": "cat_004",
       "price": 27,
@@ -384,7 +381,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_b_09",
+      "id": "39",
       "name": "Rich Dad Poor Dad",
       "categoryId": "cat_004",
       "price": 24,
@@ -394,7 +391,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_b_10",
+      "id": "40",
       "name": "Think and Grow Rich",
       "categoryId": "cat_004",
       "price": 23,
@@ -403,9 +400,8 @@
       "description": "Success mindset classic.",
       "createdAt": "2026-01-20"
     },
-
     {
-      "id": "prod_a_01",
+      "id": "41",
       "name": "Smart Watch",
       "categoryId": "cat_006",
       "price": 200,
@@ -415,7 +411,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_a_02",
+      "id": "42",
       "name": "Wireless Headphones",
       "categoryId": "cat_006",
       "price": 120,
@@ -425,7 +421,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_a_03",
+      "id": "43",
       "name": "Laptop Backpack",
       "categoryId": "cat_006",
       "price": 55,
@@ -435,7 +431,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_a_04",
+      "id": "44",
       "name": "Mechanical Keyboard",
       "categoryId": "cat_006",
       "price": 90,
@@ -445,7 +441,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_a_05",
+      "id": "45",
       "name": "Wireless Mouse",
       "categoryId": "cat_006",
       "price": 25,
@@ -455,7 +451,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_a_06",
+      "id": "46",
       "name": "Phone Case",
       "categoryId": "cat_006",
       "price": 15,
@@ -465,7 +461,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_a_07",
+      "id": "47",
       "name": "Power Bank",
       "categoryId": "cat_006",
       "price": 40,
@@ -475,7 +471,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_a_08",
+      "id": "48",
       "name": "USB-C Hub",
       "categoryId": "cat_006",
       "price": 60,
@@ -485,7 +481,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_a_09",
+      "id": "49",
       "name": "Webcam HD",
       "categoryId": "cat_006",
       "price": 75,
@@ -495,7 +491,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "prod_a_10",
+      "id": "50",
       "name": "Gaming Headset",
       "categoryId": "cat_006",
       "price": 110,
@@ -506,10 +502,30 @@
     }
   ],
   "categories": [
-    { "id": "cat_001", "name": "Electronics" },
-    { "id": "cat_002", "name": "Clothing" },
-    { "id": "cat_003", "name": "Home Appliances" },
-    { "id": "cat_004", "name": "Books" },
-    { "id": "cat_006", "name": "Accessories" }
+    {
+      "id": "1",
+      "name": "Electronics",
+      "description": "Devices, gadgets, and electronic accessories like phones, laptops, and cameras."
+    },
+    {
+      "id": "2",
+      "name": "Clothing",
+      "description": "Apparel for men, women, and children, including casual, formal, and sportswear."
+    },
+    {
+      "id": "3",
+      "name": "Home Appliances",
+      "description": "Essential household appliances like refrigerators, washing machines, and microwaves."
+    },
+    {
+      "id": "4",
+      "name": "Books",
+      "description": "Printed and digital books across genres including fiction, non-fiction, and educational."
+    },
+    {
+      "id": "5",
+      "name": "Accessories",
+      "description": "Fashion and tech accessories like watches, belts, bags, and phone cases."
+    }
   ]
 }

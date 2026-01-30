@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
-  --sidebar-color: #FBF6F6;        
-  --body-color: #ffffff;   
-  --primary-color: #e8dede;   
-  --primary-color-light: #f3ecec;
-  --text-color: #4a4a4a;    
-  --logo-color: #7065f5; 
-  --danger-color: #d94a4a;      
-}
-
 /* :root {
+  --sidebar-color: #fbf6f6;
+  --body-color: #ffffff;
+  --primary-color: #e8dede;
+  --primary-color-light: #f3ecec;
+  --text-color: #4a4a4a;
+  --logo-color: #7065f5;
+  --danger-color: #d94a4a;
+} */
+
+:root {
   --body-color: #18191a;
   --sidebar-color: #242526;
   --primary-color: #3a3b3c;
@@ -18,23 +18,25 @@
   --text-color: #ccc;
   --logo-color: #7065f5;
   --danger-color: #ef4444;
-} */
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins,sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 body {
   height: 100vh;
+  width: 100vw;
   background-color: var(--body-color);
   display: flex;
   align-items: start;
   color: var(--text-color);
 }
 
+/* Start Sidebar */
 .sidebar {
   width: 15%;
   height: 100vh;
@@ -86,13 +88,15 @@ body {
   top: 0;
 }
 
-#logout{
-    margin-top: 350px;
-    transition: all 300ms ease;
+#logout {
+  width: 100%;
+  position: absolute;
+  bottom: -200px;
+  transition: all 300ms ease;
 }
 
-#logout:hover{
-    background-color: var(--primary-color-light);
+#logout:hover {
+  background-color: var(--primary-color-light);
   color: var(--danger-color);
   cursor: pointer;
 }
@@ -106,7 +110,292 @@ body {
   left: 0;
   top: 0;
 }
+/* End Sidebar */
 
-.content{
-    padding: 25px;
+/* Start Main */
+.content {
+  padding: 25px;
 }
+
+.sideTab {
+  display: none;
+}
+
+.sideTab.active {
+  display: block;
+}
+
+.tap.active {
+  background-color: var(--primary-color-light);
+  color: var(--logo-color);
+}
+
+.tap.tap.active::after {
+  content: '';
+  width: 6px;
+  height: 100%;
+  background-color: var(--logo-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.tap.active .icon {
+  color: #7065f5;
+}
+/* End Main */
+
+/* Start Categories Section */
+#categories {
+  padding: 30px;
+  width: 80vw;
+}
+
+.categories-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.categories-header h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.categories-header .categoryBtn {
+  padding: 15px 25px;
+  border: none;
+  outline: none;
+  background-color: var(--logo-color);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: all 300ms ease;
+}
+
+.categories-header .categoryBtn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.categories-header .categoryBtn i {
+  margin-right: 10px;
+}
+
+hr {
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+/* Add new Category */
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay-delete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay-update {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+/* Modal Box */
+.modal {
+  background: var(--sidebar-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90%;
+}
+
+.modal h3 {
+  margin-bottom: 15px;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--primary-color);
+  background: var(--body-color);
+  color: var(--text-color);
+  outline: none;
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.cancel {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+.btn.save {
+  background: var(--logo-color);
+  color: #fff;
+}
+
+.btn.danger {
+  background: var(--danger-color);
+  color: white;
+}
+
+
+.category-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.category-search .totalCategories {
+  background-color: var(--primary-color);
+  padding: 15px 20px;
+  width: 450px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+}
+
+.category-search .search-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  padding-left: 20px;
+  background-color: var(--primary-color);
+}
+
+.category-search .search-input input {
+  width: 450px;
+  height: 60px;
+  padding: 0 20px;
+  font-weight: 400;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+.categories-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--body-color);
+  border-radius: 8px;
+  overflow: hidden;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.categories-table thead {
+  background: var(--primary-color);
+  height: 60px;
+}
+
+.categories-table th,
+.categories-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+.categories-table td:nth-child(3) {
+  max-width: 600px;      
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.categories-table th {
+  font-weight: 800;
+}
+
+.categories-table tbody tr {
+  border-bottom: 1px solid var(--primary-color-light);
+}
+
+.categories-table tbody tr:hover {
+  background: var(--primary-color-light);
+}
+
+/* Actions column */
+.categories-table .actions {
+  display: flex;
+  gap: 25px;
+}
+
+.categories-table .actions i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.categories-table .actions .edit {
+  color: var(--logo-color);
+}
+
+.categories-table .actions .delete {
+  color: var(--danger-color);
+}
+
+/* End Categories Section */
