@@ -1,36 +1,572 @@
 {
-  "products": [],
-  "categories": [
+  "products": [
     {
-      "id": "1",
-      "name": "Electronics",
-      "description": "Devices, gadgets, and electronic accessories like phones, laptops, and cameras."
+      "id": "prod_e_01",
+      "name": "iPhone 14 Pro",
+      "categoryId": "cat_001",
+      "priceId":"cat_0010",
+      "price": 1100,
+      "imageUrl": "assets/images/electronics/iPhone 14 Pro.jpg",
+      "stockQuantity": 12,
+      "description": "Apple smartphone with advanced camera",
+      "createdAt": "2026-01-20"
     },
     {
-      "id": "2",
-      "name": "Clothing",
-      "description": "Apparel for men, women, and children, including casual, formal, and sportswear."
+      "id": "prod_e_02",
+      "name": "Samsung Galaxy S23",
+      "categoryId": "cat_001",
+      "priceId":"cat_009",
+      "price": 950,
+      "imageUrl": "assets/images/electronics/Samsung Galaxy S23.jpg",
+      "stockQuantity": 15,
+      "description": "Samsung flagship Android smartphone.",
+      "createdAt": "2026-01-20"
     },
     {
-      "id": "3",
-      "name": "Home Appliances",
-      "description": "Essential household appliances like refrigerators, washing machines, and microwaves."
+      "id": "prod_e_03",
+      "name": "MacBook Air M2",
+      "categoryId": "cat_001",
+      "priceId":"cat_0010",
+      "price": 1400,
+      "imageUrl": "assets/images/electronics/MacBook Air M2.jpg",
+      "stockQuantity": 8,
+      "description": "Lightweight Apple laptop with M2 chip.",
+      "createdAt": "2026-01-20"
     },
     {
-      "id": "4",
-      "name": "Books",
-      "description": "Printed and digital books across genres including fiction, non-fiction, and educational."
+      "id": "prod_e_04",
+      "name": "Dell XPS 13",
+      "categoryId": "cat_001",
+      "priceId":"cat_0010",
+      "price": 1250,
+      "imageUrl": "assets/images/electronics/Dell XPS 13.jpg",
+      "stockQuantity": 10,
+      "description": "Premium ultrabook for professionals.",
+      "createdAt": "2026-01-20"
     },
     {
-      "id": "5",
-      "name": "Accessories",
-      "description": "Fashion and tech accessories like watches, belts, bags, and phone cases."
+      "id": "prod_e_05",
+      "name": "iPad Pro",
+      "categoryId": "cat_001",
+      "priceId":"cat_009",
+      "price": 900,
+      "imageUrl": "assets/images/electronics/iPad Pro.jpg",
+      "stockQuantity": 14,
+      "description": "Powerful tablet for work and creativity.",
+      "createdAt": "2026-01-20"
     },
     {
-      "categoryIdToUpdate": "1769976420039703",
-      "name": "Testcategory",
-      "description": "George aldy kamel one",
-      "id": "1769976420039703"
+      "id": "prod_e_06",
+      "name": "Smart TV 55 Inch",
+      "categoryId": "cat_001",
+      "priceId":"cat_009",
+      "price": 700,
+      "imageUrl": "assets/images/electronics/Smart TV 55 Inch.jpg",
+      "stockQuantity": 9,
+      "description": "4K UHD Smart Television.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_e_07",
+      "name": "PlayStation 5",
+      "categoryId": "cat_001",
+      "priceId":"cat_009",
+      "price": 600,
+      "imageUrl": "assets/images/electronics/PlayStation 5.jpg",
+      "stockQuantity": 6,
+      "description": "Next-generation gaming console.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_e_08",
+      "name": "Canon DSLR Camera",
+      "categoryId": "cat_001",
+      "priceId":"cat_009",
+      "price": 850,
+      "imageUrl": "assets/images/electronics/Canon DSLR Camera.jpg",
+      "stockQuantity": 11,
+      "description": "Professional photography camera.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_e_09",
+      "name": "Bluetooth Speaker",
+      "categoryId": "cat_001",
+      "priceId":"cat_008",
+      "price": 120,
+      "imageUrl": "assets/images/electronics/Bluetooth Speaker.jpg",
+      "stockQuantity": 25,
+      "description": "Portable wireless speaker.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_e_10",
+      "name": "Wireless Earbuds",
+      "categoryId": "cat_001",
+      "priceId":"cat_008",
+      "price": 130,
+      "imageUrl": "assets/images/electronics/Wireless Earbuds.jpg",
+      "stockQuantity": 20,
+      "description": "True wireless earbuds with charging case.",
+      "createdAt": "2026-01-20"
+    },
+
+    {
+      "id": "prod_c_01",
+      "name": "Men Cotton T-Shirt",
+      "categoryId": "cat_002",
+      "priceId":"cat_007",
+      "price": 25,
+      "imageUrl": "assets/images/clothing/Men Cotton T-Shirt.jpg",
+      "stockQuantity": 60,
+      "description": "Comfortable cotton t-shirt for daily wear.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_c_02",
+      "name": "Women Denim Jacket",
+      "categoryId": "cat_002",
+      "priceId":"cat_007",
+      "price": 80,
+      "imageUrl": "assets/images/clothing/Women Denim Jacket.jpg",
+      "stockQuantity": 20,
+      "description": "Stylish denim jacket.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_c_03",
+      "name": "Running Shoes",
+      "categoryId": "cat_002",
+      "priceId":"cat_007",
+      "price": 95,
+      "imageUrl": "assets/images/clothing/Running Shoes.jpg",
+      "stockQuantity": 35,
+      "description": "Lightweight running shoes.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_c_04",
+      "name": "Men Hoodie",
+      "categoryId": "cat_002",
+      "priceId":"cat_007",
+      "price": 55,
+      "imageUrl": "assets/images/clothing/Men Hoodie.jpg",
+      "stockQuantity": 40,
+      "description": "Warm winter hoodie.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_c_05",
+      "name": "Women Summer Dress",
+      "categoryId": "cat_002",
+      "priceId":"cat_007",
+      "price": 65,
+      "imageUrl": "assets/images/clothing/Women Summer Dress.jpg",
+      "stockQuantity": 30,
+      "description": "Elegant summer dress.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_c_06",
+      "name": "Men Jeans",
+      "categoryId": "cat_002",
+      "priceId":"cat_007",
+      "price": 70,
+      "imageUrl": "assets/images/clothing/Men Jeans.jpg",
+      "stockQuantity": 28,
+      "description": "Slim fit men jeans.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_c_07",
+      "name": "Women Blouse",
+      "categoryId": "cat_002",
+      "priceId":"cat_007",
+      "price": 45,
+      "imageUrl": "assets/images/clothing/Women Blouse.jpg",
+      "stockQuantity": 34,
+      "description": "Casual women blouse.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_c_08",
+      "name": "Sports Shorts",
+      "categoryId": "cat_002",
+      "priceId":"cat_007",
+      "price": 30,
+      "imageUrl": "assets/images/clothing/Sports Shorts.jpg",
+      "stockQuantity": 50,
+      "description": "Comfortable sports shorts.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_c_09",
+      "name": "Winter Jacket",
+      "categoryId": "cat_002",
+      "priceId":"cat_008",
+      "price": 120,
+      "imageUrl": "assets/images/clothing/Winter Jacket.jpg",
+      "stockQuantity": 15,
+      "description": "Heavy winter jacket.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_c_10",
+      "name": "Casual Sneakers",
+      "categoryId": "cat_002",
+      "priceId":"cat_007",
+      "price": 85,
+      "imageUrl": "assets/images/clothing/Casual Sneakers.jpg",
+      "stockQuantity": 22,
+      "description": "Everyday casual sneakers.",
+      "createdAt": "2026-01-20"
+    },
+
+    {
+      "id": "prod_h_01",
+      "name": "Washing Machine",
+      "categoryId": "cat_003",
+      "priceId":"cat_009",
+      "price": 600,
+      "imageUrl": "assets/images/home_appliances/Washing Machine.jpg",
+      "stockQuantity": 7,
+      "description": "Automatic washing machine.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_h_02",
+      "name": "Refrigerator",
+      "categoryId": "cat_003",
+      "priceId":"cat_009",
+      "price": 900,
+      "imageUrl": "assets/images/home_appliances/Refrigerator.jpg",
+      "stockQuantity": 5,
+      "description": "Large capacity refrigerator.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_h_03",
+      "name": "Microwave Oven",
+      "categoryId": "cat_003",
+      "priceId":"cat_008",
+      "price": 220,
+      "imageUrl": "assets/images/home_appliances/Microwave Oven.jpg",
+      "stockQuantity": 12,
+      "description": "Fast heating microwave oven.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_h_04",
+      "name": "Air Fryer",
+      "categoryId": "cat_003",
+      "priceId":"cat_008",
+      "price": 180,
+      "imageUrl": "assets/images/home_appliances/Air Fryer.jpg",
+      "stockQuantity": 15,
+      "description": "Healthy air frying appliance.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_h_05",
+      "name": "Vacuum Cleaner",
+      "categoryId": "cat_003",
+      "priceId":"cat_008",
+      "price": 250,
+      "imageUrl": "assets/images/home_appliances/Vacuum Cleaner.jpg",
+      "stockQuantity": 18,
+      "description": "Powerful vacuum cleaner.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_h_06",
+      "name": "Blender",
+      "categoryId": "cat_003",
+      "priceId":"cat_007",
+      "price": 90,
+      "imageUrl": "assets/images/home_appliances/Blender.jpg",
+      "stockQuantity": 30,
+      "description": "Kitchen blender for smoothies.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_h_07",
+      "name": "Electric Kettle",
+      "categoryId": "cat_003",
+      "priceId":"cat_007",
+      "price": 45,
+      "imageUrl": "assets/images/home_appliances/Electric Kettle.jpg",
+      "stockQuantity": 40,
+      "description": "Fast boiling electric kettle.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_h_08",
+      "name": "Coffee Maker",
+      "categoryId": "cat_003",
+      "priceId":"cat_008",
+      "price": 150,
+      "imageUrl": "assets/images/home_appliances/Coffee Maker.jpg",
+      "stockQuantity": 20,
+      "description": "Automatic coffee machine.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_h_09",
+      "name": "Electric Fan",
+      "categoryId": "cat_003",
+      "priceId":"cat_007",
+      "price": 70,
+      "imageUrl": "assets/images/home_appliances/Electric Fan.jpg",
+      "stockQuantity": 25,
+      "description": "Silent electric fan.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_h_10",
+      "name": "Room Heater",
+      "categoryId": "cat_003",
+      "priceId":"cat_008",
+      "price": 130,
+      "imageUrl": "assets/images/home_appliances/Room Heater.jpg",
+      "stockQuantity": 10,
+      "description": "Electric room heater.",
+      "createdAt": "2026-01-20"
+    },
+
+    {
+      "id": "prod_b_01",
+      "name": "Clean Code",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 35,
+      "imageUrl": "assets/images/books/Clean Code.jpg",
+      "stockQuantity": 30,
+      "description": "A handbook of agile software craftsmanship.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_b_02",
+      "name": "JavaScript The Good Parts",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 28,
+      "imageUrl": "assets/images/books/JavaScript The Good Parts.jpg",
+      "stockQuantity": 25,
+      "description": "Best practices in JavaScript.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_b_03",
+      "name": "You Don't Know JS",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 32,
+      "imageUrl": "assets/images/books/You Don't Know JS.jpg",
+      "stockQuantity": 22,
+      "description": "Deep dive into JavaScript.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_b_04",
+      "name": "Atomic Habits",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 26,
+      "imageUrl": "assets/images/books/Atomic Habits.jpg",
+      "stockQuantity": 40,
+      "description": "Proven way to build good habits.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_b_05",
+      "name": "Deep Work",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 29,
+      "imageUrl": "assets/images/books/Deep Work.jpg",
+      "stockQuantity": 35,
+      "description": "Rules for focused success.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_b_06",
+      "name": "The Pragmatic Programmer",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 38,
+      "imageUrl": "assets/images/books/The Pragmatic Programmer.jpg",
+      "stockQuantity": 18,
+      "description": "Classic programming guide.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_b_07",
+      "name": "Eloquent JavaScript",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 34,
+      "imageUrl": "assets/images/books/Eloquent JavaScript.jpg",
+      "stockQuantity": 20,
+      "description": "Modern JavaScript programming.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_b_08",
+      "name": "Start With Why",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 27,
+      "imageUrl": "assets/images/books/Start With Why.jpg",
+      "stockQuantity": 33,
+      "description": "Leadership and inspiration.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_b_09",
+      "name": "Rich Dad Poor Dad",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 24,
+      "imageUrl": "assets/images/books/Rich Dad Poor Dad.jpg",
+      "stockQuantity": 45,
+      "description": "Financial education fundamentals.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_b_10",
+      "name": "Think and Grow Rich",
+      "categoryId": "cat_004",
+      "priceId":"cat_007",
+      "price": 23,
+      "imageUrl": "assets/images/books/Think and Grow Rich.jpg",
+      "stockQuantity": 50,
+      "description": "Success mindset classic.",
+      "createdAt": "2026-01-20"
+    },
+
+    {
+      "id": "prod_a_01",
+      "name": "Smart Watch",
+      "categoryId": "cat_006",
+      "priceId":"cat_008",
+      "price": 200,
+      "imageUrl": "assets/images/accessories/Smart Watch.jpg",
+      "stockQuantity": 16,
+      "description": "Health and fitness smartwatch.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_a_02",
+      "name": "Wireless Headphones",
+      "categoryId": "cat_006",
+      "priceId":"cat_008",
+      "price": 120,
+      "imageUrl": "assets/images/accessories/Wireless Headphones.jpg",
+      "stockQuantity": 22,
+      "description": "Noise cancelling headphones.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_a_03",
+      "name": "Laptop Backpack",
+      "categoryId": "cat_006",
+      "priceId":"cat_007",
+      "price": 55,
+      "imageUrl": "assets/images/accessories/Laptop Backpack.jpg",
+      "stockQuantity": 30,
+      "description": "Durable laptop backpack.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_a_04",
+      "name": "Mechanical Keyboard",
+      "categoryId": "cat_006",
+      "priceId":"cat_007",
+      "price": 90,
+      "imageUrl": "assets/images/accessories/Mechanical Keyboard.jpg",
+      "stockQuantity": 18,
+      "description": "RGB mechanical keyboard.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_a_05",
+      "name": "Wireless Mouse",
+      "categoryId": "cat_006",
+      "priceId":"cat_007",
+      "price": 25,
+      "imageUrl": "assets/images/accessories/Wireless Mouse.jpg",
+      "stockQuantity": 40,
+      "description": "Ergonomic wireless mouse.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_a_06",
+      "name": "Phone Case",
+      "categoryId": "cat_006",
+      "priceId":"cat_007",
+      "price": 15,
+      "imageUrl": "assets/images/accessories/Phone Case.jpg",
+      "stockQuantity": 70,
+      "description": "Shockproof phone case.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_a_07",
+      "name": "Power Bank",
+      "categoryId": "cat_006",
+      "price": 40,
+      "priceId":"cat_007",
+      "imageUrl": "assets/images/accessories/Power Bank.jpg",
+      "stockQuantity": 33,
+      "description": "Fast charging power bank.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_a_08",
+      "name": "USB-C Hub",
+      "categoryId": "cat_006",
+      "priceId":"cat_007",
+      "price": 60,
+      "imageUrl": "assets/images/accessories/USB-C Hub.jpg",
+      "stockQuantity": 21,
+      "description": "Multi-port USB-C hub.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_a_09",
+      "name": "Webcam HD",
+      "categoryId": "cat_006",
+      "price": 75,
+       "priceId":"cat_007",
+      "imageUrl": "assets/images/accessories/Webcam HD.jpg",
+      "stockQuantity": 19,
+      "description": "HD webcam for video calls.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "prod_a_10",
+      "name": "Gaming Headset",
+      "categoryId": "cat_006",
+      "priceId":"cat_008",
+      "price": 110,
+      "imageUrl": "assets/images/accessories/Gaming Headset.jpg",
+      "stockQuantity": 17,
+      "description": "Surround sound gaming headset.",
+      "createdAt": "2026-01-20"
     }
+  ],
+  "categories": [
+    { "id": "cat_001", "name": "Electronics" },
+    { "id": "cat_002", "name": "Clothing" },
+    { "id": "cat_003", "name": "Home Appliances" },
+    { "id": "cat_004", "name": "Books" },
+    { "id": "cat_006", "name": "Accessories" }
+  ],
+  "Price": [
+    { "id": "cat_007", "name": "Under $100" },
+    { "id": "cat_008", "name": "From $100 to $500" },
+    { "id": "cat_009", "name": "From $501 to $1000" },
+    { "id": "cat_0010", "name": "over $1000" }
+    
   ]
 }
