@@ -1,32 +1,3 @@
-/**
- * Switches between dashboard tabs and updates the active sidebar item.
- *
- * - Hides all content sections (.sideTab)
- * - Displays the selected section based on tabId
- * - Removes the active state from all sidebar tabs
- * - Adds the active state to the clicked sidebar tab
- *
- * @param {string} tabId - The id of the section to be displayed
- * @param {HTMLElement} el - The clicked sidebar tab element
- */
-function showTab(tabId, el) {
-  // switch content
-  document
-    .querySelectorAll('.sideTab')
-    .forEach((tab) => tab.classList.remove('active'));
-
-  document
-    .querySelectorAll('.tap')
-    .forEach((tab) => tab.classList.remove('active'));
-  document.getElementById(tabId).classList.add('active');
-
-  // switch sidebar active
-  document
-    .querySelectorAll('.tap')
-    .forEach((tap) => tap.classList.remove('active'));
-
-  if (el) el.classList.add('active');
-}
 
 /**
  * Fetches categories from the server and renders them in the HTML table.
@@ -90,9 +61,9 @@ const renderCaterogries = async (term) => {
 
   container.innerHTML = template;
   totalCategories.innerHTML = count - 1;
-  showTab('categories', document.querySelector('#categoryTab'));
 };
-window.addEventListener('DOMContentLoaded', () => renderCaterogries());
+const categoriesSection = document.getElementById('c');
+categoriesSection.addEventListener('click', renderCaterogries);
 
 /**
  * ============================
@@ -233,10 +204,7 @@ const createCategory = async (e) => {
     closeModal();
 
     // Refresh categories table
-    renderCaterogries();
-
-    // Ensure categories tab is still active
-    showTab('categories', document.querySelector('#categoryTab'));
+    await renderCaterogries();
   }
 };
 
@@ -302,7 +270,7 @@ function closeDeleteModal() {
  * - Deletes all products related to that category
  * - Refreshes the categories list
  */
-confirmDeleteBtn.addEventListener('click', async () => {
+confirmDeleteBtn.addEventListener('click', async (e) => {
   // Safety check: if no category is selected, stop execution
   if (!categoryIdToDelete) return;
 
@@ -405,3 +373,36 @@ categorySearchForm.search.addEventListener('keyup', () => {
 categorySearchForm.addEventListener('submit', (e) => {
   e.preventDefault();
 });
+
+
+const tabs = document.querySelectorAll('.taps .tap');
+const pages = document.querySelectorAll('.sideTab');
+
+function activateTab(pageId) {
+  // tabs
+  tabs.forEach((tab) => {
+    tab.classList.toggle('active', tab.dataset.page === pageId);
+  });
+
+  // pages
+  pages.forEach((page) => {
+    page.classList.toggle('active', page.id === pageId);
+  });
+
+  // save state
+  localStorage.setItem('activeTab', pageId);
+
+  if(pageId == 'categories'){
+    renderCaterogries();
+  }
+}
+
+// click
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    activateTab(tab.dataset.page);
+  });
+});
+
+const savedTab = localStorage.getItem('activeTab');
+activateTab(savedTab);
