@@ -18,27 +18,27 @@
         <h3>LOGO</h3>
       </div>
       <div class="taps">
-        <div class="tap active" onclick="showTab('dashboard', this)">
+        <div class="tap active" data-page="dashboard">
           <div class="icon"><i class="fa-solid fa-grip"></i></div>
           <h3 class="tap-title">Dashboard</h3>
         </div>
 
-        <div class="tap" onclick="showTab('orders', this)">
+        <div class="tap" data-page="orders">
           <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
           <h3 class="tap-title">Orders</h3>
         </div>
 
-        <div class="tap" onclick="showTab('products', this)">
+        <div class="tap" data-page="products">
           <div class="icon"><i class="fa-solid fa-box"></i></div>
           <h3 class="tap-title">Products</h3>
         </div>
 
-        <div class="tap" id="categoryTab" onclick="showTab('categories', this)">
+        <div class="tap" id="categoryTab" data-page="categories">
           <div class="icon"><i class="fa-solid fa-tags"></i></div>
-          <h3 class="tap-title">Categories</h3>
+          <h3 id="c" class="tap-title">Categories</h3>
         </div>
 
-        <div class="tap" id="logout">
+        <div class="tap" id="logout" data-page="logout">
           <div class="icon"><i class="fa-solid fa-power-off"></i></div>
           <h3 class="tap-title">Logout</h3>
         </div>
@@ -150,8 +150,8 @@
               </p>
 
               <div class="modal-actions">
-                <button id="confirmDeleteBtn" class="btn danger">Delete</button>
-                <button onclick="closeDeleteModal()" class="btn cancel">
+                <button type="button" id="confirmDeleteBtn" class="btn danger">Delete</button>
+                <button type="button" onclick="closeDeleteModal()" class="btn cancel">
                   Cancel
                 </button>
               </div>
