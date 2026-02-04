@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="login-card">
+    <h1>Welcome Back</h1>
+    <p>Please login to your account</p>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email" />
+        <div class="error" id="emailError">Email is required</div>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="password" />
+        <div class="error" id="passwordError">Password is required</div>
+      </div>
+
+      <button class="btn" type="submit">Login</button>
+      <div class="error center" id="loginError">
+        Invalid email or password
+      </div>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
