@@ -1,0 +1,166 @@
+:root {
+  --bg-color: #fbf6f6;
+  --confirmed-color: #16a34a;
+  --cansle-color: #dc2626;
+  --pending-color: #f59e0b;
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding-top: 65px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Italiana', serif;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 25px 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .card-header .user h3 {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+.card .card-header .user h5 {
+  color: grey;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.confirmed-btn {
+  display: flex;
+  align-items: center;
+  background-color: #f0fdf4;
+  padding: 10px 15px;
+  color: var(--confirmed-color);
+}
+
+.confirmed-btn .confirmed-circle {
+  background-color: var(--confirmed-color);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.rejected-btn {
+  display: flex;
+  align-items: center;
+  background-color: #fef2f2;
+  padding: 10px 15px;
+  color: var(--cansle-color);
+}
+
+.rejected-btn .rejected-circle {
+  background-color: var(--cansle-color);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.pending-btn {
+  display: flex;
+  align-items: center;
+  background-color: #fff7ed;
+  padding: 10px 15px;
+  color: var(--pending-color);
+}
+
+.pending-btn .pending-circle {
+  background-color: var(--pending-color);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card .card-items .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.card .card-items .item .product-info {
+  display: flex;
+  align-items: center;
+}
+
+.card .card-items .item .product-info h3 {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.card .card-items .item .product-info h5 {
+    color: grey;
+  margin-top: 4px;
+  margin-left: 20px;
+}
+
+.card .card-items .product-info img {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.card .card-items .item .price{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.card .card-items .item .price .quantity{
+    color: grey;
+    text-align: right;
+    margin-bottom: 0;
+}
+.card .card-items .item .price .total-price{
+    margin-top: 4px;
+}
+
+.card .card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .card-footer .total-price{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.card .card-footer .total-price p{
+   margin-top: 0;
+}
+
+.card .card-footer .total-price h3{
+   margin-top: 0;
+}
+
