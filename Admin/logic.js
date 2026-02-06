@@ -491,6 +491,11 @@ const addNewProduct = async (e) => {
       allValid = false;
     }
   }
+  
+  
+  const categoryRes = await fetch(`http://localhost:3000/categories/${addProductForm.productCategory.value}`)
+  const categoryName = await categoryRes.json();
+  
 
   if (allValid) {
     let imageUrl = '';
@@ -498,7 +503,7 @@ const addNewProduct = async (e) => {
     if (file) {
       // Use only the file name for path
       imageUrl =
-        `assets/images/${addProductForm.productCategory.value}/` + file.name;
+        `assets/images/${categoryName.name}/` + file.name;
     }
 
     const id = generateId();
@@ -526,6 +531,7 @@ const addNewProduct = async (e) => {
 
     closeAddProduct();
     await renderProducts();
+    document.getElementById('productsTab').click();
   }
 };
 
@@ -724,6 +730,16 @@ window.rejectOrder = async (orderId) => {
   });
   ordersTap.click();
 };
+
+///////////////////////////////////////////////////////////////
+////////////////////// Logout Logic ///////////////////////
+////////////////////////////////////////////////////////////
+
+const logoutTap = document.getElementById('logout');
+logoutTap.addEventListener('click', () => {
+  window.location.replace('http://127.0.0.1:5500/Auth/login/login.html');
+  localStorage.removeItem('userName');
+});
 
 //====================================================================================
 const tabs = document.querySelectorAll('.taps .tap');

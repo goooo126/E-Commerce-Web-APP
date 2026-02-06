@@ -15,19 +15,20 @@
       "id": "2",
       "name": "Samsung Galaxy S23",
       "categoryId": "1",
-      "priceId":"cat_0010",
+      "priceId": "cat_0010",
       "price": 1100,
       "imageUrl": "assets/images/electronics/Samsung Galaxy S23.jpg",
       "stockQuantity": 12,
       "description": "Apple smartphone with advanced camera",
-      "createdAt": "2026-01-20"
+      "createdAt": "2026-01-20",
+      "sold": 0
     },
     {
       "id": "3",
       "name": "MacBook Air M2",
       "categoryId": "1",
       "createdAt": "2026-01-20",
-      "priceId":"cat_0010",
+      "priceId": "cat_0010",
       "price": 1400,
       "imageUrl": "assets/images/electronics/MacBook Air M2.jpg",
       "stockQuantity": 8,
@@ -39,7 +40,7 @@
       "name": "Dell XPS 13",
       "categoryId": "1",
       "createdAt": "2026-01-20",
-      "priceId":"cat_0010",
+      "priceId": "cat_0010",
       "price": 1250,
       "imageUrl": "assets/images/electronics/Dell XPS 13.jpg",
       "stockQuantity": 10,
@@ -47,11 +48,11 @@
       "sold": 0
     },
     {
-       "id": "5",
+      "id": "5",
       "name": "iPad Pro",
       "categoryId": "1",
       "createdAt": "2026-01-20",
-      "priceId":"cat_009",
+      "priceId": "cat_009",
       "price": 900,
       "imageUrl": "assets/images/electronics/iPad Pro.jpg",
       "stockQuantity": 14,
@@ -63,7 +64,7 @@
       "name": "Smart TV 55 Inch",
       "categoryId": "1",
       "createdAt": "2026-01-20",
-      "priceId":"cat_009",
+      "priceId": "cat_009",
       "price": 700,
       "imageUrl": "assets/images/electronics/Smart TV 55 Inch.jpg",
       "stockQuantity": 9,
@@ -74,7 +75,7 @@
       "id": "7",
       "name": "PlayStation 5",
       "categoryId": "1",
-      "priceId":"cat_009",
+      "priceId": "cat_009",
       "price": 600,
       "imageUrl": "assets/images/electronics/PlayStation 5.jpg",
       "stockQuantity": 6,
@@ -86,7 +87,7 @@
       "id": "8",
       "name": "Canon DSLR Camera",
       "categoryId": "1",
-      "priceId":"cat_009",
+      "priceId": "cat_009",
       "price": 850,
       "imageUrl": "assets/images/electronics/Canon DSLR Camera.jpg",
       "stockQuantity": 11,
@@ -98,7 +99,7 @@
       "id": "9",
       "name": "Bluetooth Speaker",
       "categoryId": "1",
-      "priceId":"cat_008",
+      "priceId": "cat_008",
       "price": 120,
       "imageUrl": "assets/images/electronics/Bluetooth Speaker.jpg",
       "stockQuantity": 25,
@@ -110,7 +111,7 @@
       "id": "10",
       "name": "Wireless Earbuds",
       "categoryId": "1",
-      "priceId":"cat_008",
+      "priceId": "cat_008",
       "price": 130,
       "imageUrl": "assets/images/electronics/Wireless Earbuds.jpg",
       "stockQuantity": 20,
@@ -122,7 +123,7 @@
       "id": "11",
       "name": "Men Cotton T-Shirt",
       "categoryId": "2",
-      "priceId":"cat_007",
+      "priceId": "cat_007",
       "price": 25,
       "imageUrl": "assets/images/clothing/Men Cotton T-Shirt.jpg",
       "stockQuantity": 60,
@@ -134,7 +135,7 @@
       "id": "12",
       "name": "Women Denim Jacket",
       "categoryId": "2",
-      "priceId":"cat_007",
+      "priceId": "cat_007",
       "price": 80,
       "imageUrl": "assets/images/clothing/Women Denim Jacket.jpg",
       "stockQuantity": 20,
@@ -146,7 +147,7 @@
       "id": "13",
       "name": "Running Shoes",
       "categoryId": "2",
-      "priceId":"cat_007",
+      "priceId": "cat_007",
       "price": 95,
       "imageUrl": "assets/images/clothing/Running Shoes.jpg",
       "stockQuantity": 35,
@@ -158,7 +159,7 @@
       "id": "14",
       "name": "Men Hoodie",
       "categoryId": "2",
-      "priceId":"cat_007",
+      "priceId": "cat_007",
       "price": 55,
       "imageUrl": "assets/images/clothing/Men Hoodie.jpg",
       "stockQuantity": 40,
@@ -170,7 +171,7 @@
       "id": "15",
       "name": "Women Summer Dress",
       "categoryId": "2",
-      "priceId":"cat_007",
+      "priceId": "cat_007",
       "price": 65,
       "imageUrl": "assets/images/clothing/Women Summer Dress.jpg",
       "stockQuantity": 30,
@@ -182,7 +183,7 @@
       "id": "16",
       "name": "Men Jeans",
       "categoryId": "2",
-      "priceId":"cat_007",
+      "priceId": "cat_007",
       "price": 70,
       "imageUrl": "assets/images/clothing/Men Jeans.jpg",
       "stockQuantity": 28,
@@ -194,7 +195,7 @@
       "id": "17",
       "name": "Women Blouse",
       "categoryId": "2",
-      "priceId":"cat_007",
+      "priceId": "cat_007",
       "price": 45,
       "imageUrl": "assets/images/clothing/Women Blouse.jpg",
       "stockQuantity": 34,
@@ -206,7 +207,7 @@
       "id": "18",
       "name": "Sports Shorts",
       "categoryId": "2",
-      "priceId":"cat_007",
+      "priceId": "cat_007",
       "price": 30,
       "imageUrl": "assets/images/clothing/Sports Shorts.jpg",
       "stockQuantity": 50,
@@ -218,7 +219,7 @@
       "id": "19",
       "name": "Winter Jacket",
       "categoryId": "2",
-      "priceId":"cat_008",
+      "priceId": "cat_008",
       "price": 120,
       "imageUrl": "assets/images/clothing/Winter Jacket.jpg",
       "stockQuantity": 15,
@@ -230,7 +231,7 @@
       "id": "20",
       "name": "Casual Sneakers",
       "categoryId": "2",
-      "priceId":"cat_007",
+      "priceId": "cat_007",
       "price": 85,
       "imageUrl": "assets/images/clothing/Casual Sneakers.jpg",
       "stockQuantity": 22,
@@ -242,7 +243,7 @@
       "id": "21",
       "name": "Washing Machine",
       "categoryId": "3",
-      "priceId":"cat_009",
+      "priceId": "cat_009",
       "price": 600,
       "imageUrl": "assets/images/home_appliances/Washing Machine.jpg",
       "stockQuantity": 7,
@@ -254,7 +255,7 @@
       "id": "22",
       "name": "Refrigerator",
       "categoryId": "3",
-      "priceId":"cat_009",
+      "priceId": "cat_009",
       "price": 900,
       "imageUrl": "assets/images/home_appliances/Refrigerator.jpg",
       "stockQuantity": 5,
@@ -573,34 +574,101 @@
   ],
   "cart": [
     {
-      "id": "1",
-      "customerName": "John Doe",
-      "quantity": 2,
-      "productId": "1770138912302232",
-      "productName": "Fresh Milk",
-      "productDescription": "this is the food of baby",
-      "price": 5,
-      "status": "confirmed"
+      "id": "1770324348324",
+      "customerName": "george",
+      "orderDate": "2/5/2026, 10:45:48 PM",
+      "status": "confirmed",
+      "totalPrice": 12670,
+      "items": [
+        {
+          "productId": 1770324339856,
+          "name": "MacBook Air M2",
+          "price": 1400,
+          "quantity": 2,
+          "image": "../assets/images/electronics/MacBook Air M2.jpg"
+        },
+        {
+          "productId": 1770324340922,
+          "name": "Clean Code",
+          "price": 35,
+          "quantity": 2,
+          "image": "../assets/images/books/Clean Code.jpg"
+        },
+        {
+          "productId": 1770325068727,
+          "name": "Bluetooth Speaker",
+          "price": 120,
+          "quantity": 6,
+          "image": "../assets/images/electronics/Bluetooth Speaker.jpg"
+        },
+        {
+          "productId": 1770325070249,
+          "name": "iPhone 14 Pro",
+          "price": 1100,
+          "quantity": 2,
+          "image": "../assets/images/electronics/iPhone 14 Pro.jpg"
+        },
+        {
+          "productId": 1770325114488,
+          "name": "MacBook Air M2",
+          "price": 1400,
+          "quantity": 1,
+          "image": "../assets/images/electronics/MacBook Air M2.jpg"
+        },
+        {
+          "productId": 1770325981557,
+          "name": "Dell XPS 13",
+          "price": 1250,
+          "quantity": 1,
+          "image": "../assets/images/electronics/Dell XPS 13.jpg"
+        }
+      ]
     },
     {
-      "id": "2",
-      "customerName": "Jane Smith",
-      "quantity": 1,
-      "productId": "2",
-      "productName": "Samsung Galaxy S23",
-      "productDescription": "Samsung flagship Android smartphone.",
-      "price": 950,
-      "status": "confirmed"
+      "id": "1770324348324",
+      "customerName": "george",
+      "orderDate": "2/5/2026, 10:45:48 PM",
+      "status": "rejected",
+      "totalPrice": 2870,
+      "items": [
+        {
+          "productId": 1770324339856,
+          "name": "MacBook Air M2",
+          "price": 1400,
+          "quantity": 2,
+          "image": "../assets/images/electronics/MacBook Air M2.jpg"
+        },
+        {
+          "productId": 1770324340922,
+          "name": "Clean Code",
+          "price": 35,
+          "quantity": 2,
+          "image": "../assets/images/books/Clean Code.jpg"
+        }
+      ]
     },
     {
-      "id": "3",
-      "customerName": "Alice Johnson",
-      "quantity": 3,
-      "productId": "11",
-      "productName": "Men Cotton T-Shirt",
-      "productDescription": "Comfortable cotton t-shirt for daily wear.",
-      "price": 25,
-      "status": "confirmed"
+      "id": "1770324348324",
+      "customerName": "george",
+      "orderDate": "2/5/2026, 10:45:48 PM",
+      "status": "pending",
+      "totalPrice": 2870,
+      "items": [
+        {
+          "productId": 1770324339856,
+          "name": "MacBook Air M2",
+          "price": 1400,
+          "quantity": 2,
+          "image": "../assets/images/electronics/MacBook Air M2.jpg"
+        },
+        {
+          "productId": 1770324340922,
+          "name": "Clean Code",
+          "price": 35,
+          "quantity": 2,
+          "image": "../assets/images/books/Clean Code.jpg"
+        }
+      ]
     }
   ],
   "users": [
@@ -608,39 +676,96 @@
       "name": "George adly kamel",
       "email": "gorgeadly126@gmail.com",
       "password": "george",
-      "id": 1
+      "id": 1,
+      "role": "user"
     },
     {
       "name": "George adly kamel",
       "email": "gorgeadly12@gmail.com",
       "password": "george",
-      "id": 2
+      "id": 2,
+      "role": "user"
     },
     {
       "name": "George adly kamel",
       "email": "gorgeadly1@gmail.com",
       "password": "george",
-      "id": 3
+      "id": 3,
+      "role": "user"
     },
     {
       "name": "Jhon  Adly",
       "email": "foodie@rescounts.com",
       "password": "45george",
-      "id": 4
+      "id": 4,
+      "role": "user"
+    },
+    {
+      "name": "George Adly",
+      "email": "amdin@admin.com",
+      "password": "george",
+      "id": 5,
+      "role": "admin"
+    },
+    {
+      "name": "Beshoy Yasser",
+      "email": "beshoy@gmail.com",
+      "password": "beshoy",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "name": "Meret Talat",
+      "email": "meret@t",
+      "password": "123456",
+      "role": "user",
+      "id": 7
     }
   ],
   "categories": [
-    { "id": "1", "name": "Electronics" },
-    { "id": "2", "name": "Clothing" },
-    { "id": "3", "name": "Home Appliances" },
-    { "id": "4", "name": "Books" },
-    { "id": "5", "name": "Accessories" }
+    {
+      "categoryIdToUpdate": "1",
+      "name": "Electronics",
+      "description": "",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "description": "",
+      "name": "Clothing"
+    },
+    {
+      "id": "3",
+      "description": "",
+      "name": "Home Appliances"
+    },
+    {
+      "id": "4",
+      "description": "",
+      "name": "Books"
+    },
+    {
+      "id": "5",
+      "description": "",
+      "name": "Accessories"
+    }
   ],
   "Price": [
-    { "id": "cat_007", "name": "Under $100" },
-    { "id": "cat_008", "name": "From $100 to $500" },
-    { "id": "cat_009", "name": "From $501 to $1000" },
-    { "id": "cat_0010", "name": "over $1000" }
-    
+    {
+      "id": "cat_007",
+      "name": "Under $100"
+    },
+    {
+      "id": "cat_008",
+      "name": "From $100 to $500"
+    },
+    {
+      "id": "cat_009",
+      "name": "From $501 to $1000"
+    },
+    {
+      "id": "cat_0010",
+      "name": "over $1000"
+    }
   ]
 }

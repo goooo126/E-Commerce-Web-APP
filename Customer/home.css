@@ -11,7 +11,7 @@ body {
 }
 
 header{
-    margin: 0 100px;
+ margin: 0 100px;
 }
 
 .navbar {
@@ -295,4 +295,13 @@ header{
 .wishlist-btn {
   position: absolute;
   z-index: 10;
+}
+
+
+.logout{
+  cursor: pointer;
+}
+
+.logout:hover{
+   color: #520808;
 }

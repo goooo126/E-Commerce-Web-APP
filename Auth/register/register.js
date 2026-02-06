@@ -57,6 +57,7 @@ form.addEventListener('submit', async (e) => {
     name,
     email,
     password,
+    role : 'user',
   };
 
   try {
