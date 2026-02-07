@@ -1,4 +1,6 @@
-
+///////////////////////////////////////////////////////////////
+////////////////////// Category Logic ///////////////////////
+////////////////////////////////////////////////////////////
 /**
  * Fetches categories from the server and renders them in the HTML table.
  *
@@ -62,7 +64,7 @@ const renderCaterogries = async (term) => {
   container.innerHTML = template;
   totalCategories.innerHTML = count - 1;
 };
-const categoriesSection = document.getElementById('c');
+const categoriesSection = document.getElementById('categoryTab');
 categoriesSection.addEventListener('click', renderCaterogries);
 
 /**
@@ -116,6 +118,8 @@ function closeModal() {
 function validation(element) {
   var categoryNameRegex = /^[A-Za-z0-9 ]{5,30}$/;
   var categoryDesctiptionRegex = /^[A-Za-z0-9 ]{15,300}$/;
+  var priceRegex = /^\d+(\.\d{1,2})?$/;
+  var productQuantityRegex = /^\d+$/;
 
   if (!element.value) {
     element.nextElementSibling.textContent = `* Please enter your ${element.name}`;
@@ -126,9 +130,16 @@ function validation(element) {
     (element.name == 'CatergoryName' &&
       !categoryNameRegex.test(element.value)) ||
     (element.name == 'CategoryDescription' &&
-      !categoryDesctiptionRegex.test(element.value))
+      !categoryDesctiptionRegex.test(element.value)) ||
+    (element.name == 'productName' && !categoryNameRegex.test(element.value)) ||
+    (element.name == 'productDescription' &&
+      !categoryDesctiptionRegex.test(element.value)) ||
+    (element.name == 'productPrice' && !priceRegex.test(element.value)) ||
+    (element.name == 'productQuantity' &&
+      !productQuantityRegex.test(element.value))
   ) {
     element.nextElementSibling.textContent = `Please enter ${element.name} data in valid format`;
+    element.nextElementSibling.style = `font-size: 12px`;
     element.style.border = '1px solid #ef4444';
     element.nextElementSibling.style.color = '#ef4444';
     return false;
@@ -205,6 +216,7 @@ const createCategory = async (e) => {
 
     // Refresh categories table
     await renderCaterogries();
+    loadCategories();
   }
 };
 
@@ -284,6 +296,7 @@ confirmDeleteBtn.addEventListener('click', async (e) => {
   // Close modal and refresh categories table
   closeDeleteModal();
   renderCaterogries();
+  loadCategories();
 
   // ==============================
   // Delete related products
@@ -360,6 +373,7 @@ const updateCategory = async (e) => {
 
     // Refresh categories table
     renderCaterogries();
+    loadCategories();
   }
 };
 updateForm.addEventListener('submit', updateCategory);
@@ -374,7 +388,360 @@ categorySearchForm.addEventListener('submit', (e) => {
   e.preventDefault();
 });
 
+///////////////////////////////////////////////////////////////
+////////////////////// Products Logic ///////////////////////
+////////////////////////////////////////////////////////////
 
+const renderProducts = async (term) => {
+  var container = document.getElementById('product-container');
+  var totalProducts = document.getElementById('totalPro');
+  var productUri = 'http://localhost:3000/products';
+  var categoryUri = 'http://localhost:3000/categories';
+
+  if (term) {
+    productUri += `/?q=${term}`;
+  }
+
+  const productsRes = await fetch(productUri);
+  const products = await productsRes.json();
+
+  const categoriesRes = await fetch(categoryUri);
+  const categories = await categoriesRes.json();
+
+  var template = '';
+  var count = 1;
+  products.forEach((product) => {
+    const categoryName = categories.find(
+      (catecory) => catecory.id === product.categoryId,
+    );
+    const progressBar =
+      product.stockQuantity > 0
+        ? (product.sold / product.stockQuantity) * 100
+        : 0;
+    template += `
+     <tr data-id="${product.id}">
+        <td>${count}</td>
+        <td>${product.name}</td>
+        <td>${categoryName ? categoryName.name : 'No Category'}</td>
+        <td>${product.price}</td>
+        <td>${product.stockQuantity}</td>
+        <td>
+          <div class="sold-container">
+              <h4 class="progress-text">(${product.sold}/${product.stockQuantity})</h4>
+              <div class="progress-bar-container">
+                  <div class="progress-bar" style="width: ${progressBar}%"></div>
+              </div>
+            </div>
+        </td>
+        <td class="actions">
+          <i class="fa-solid fa-pen edit" onclick="openProductUpdateModal('${product.id}', '${product.name}', '${product.description}',' ${product.price}', '${product.stockQuantity}', '${product.imageUrl}', '${product.categoryId}')"></i>
+          <i class="fa-solid fa-trash delete" onclick="openProductDeleteModal('${product.id}','${product.name}')"></i>
+        </td>
+      </tr>
+    `;
+    count++;
+  });
+
+  container.innerHTML = template;
+  totalProducts.innerHTML = count - 1;
+};
+const productsTap = document.getElementById('productsTab');
+productsTap.addEventListener('click', () => renderProducts());
+
+const productSearchForm = document.querySelector('.productSearchForm');
+productSearchForm.search.addEventListener('keyup', () => {
+  renderProducts(productSearchForm.search.value.trim());
+});
+productSearchForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+});
+
+const openAddProduct = () => {
+  document.querySelector('#addProductModal').style = 'display: flex;';
+};
+
+const closeAddProduct = () => {
+  const productName = (document.querySelector('#addProductModal').style =
+    'display: none;');
+  document.querySelector('#addProductForm').reset();
+};
+const addNewProductBtn = document.querySelector('.productBtn');
+addNewProductBtn.addEventListener('click', openAddProduct);
+
+const addProductForm = document.getElementById('addProductForm');
+
+const addNewProduct = async (e) => {
+  e.preventDefault();
+
+  var elements = [
+    addProductForm.productName,
+    addProductForm.productDescription,
+    addProductForm.productPrice,
+    addProductForm.productQuantity,
+    addProductForm.productImage,
+    addProductForm.productCategory,
+  ];
+
+  var allValid = true;
+
+  // Validate all inputs
+  for (var element of elements) {
+    var valid = validation(element);
+    if (!valid) {
+      allValid = false;
+    }
+  }
+  
+  
+  const categoryRes = await fetch(`http://localhost:3000/categories/${addProductForm.productCategory.value}`)
+  const categoryName = await categoryRes.json();
+  
+
+  if (allValid) {
+    let imageUrl = '';
+    const file = addProductForm.productImage.files[0];
+    if (file) {
+      // Use only the file name for path
+      imageUrl =
+        `assets/images/${categoryName.name}/` + file.name;
+    }
+
+    const id = generateId();
+    const name = addProductForm.productName.value;
+    const description = addProductForm.productDescription.value;
+    const price = Number(addProductForm.productPrice.value);
+    const stockQuantity = Number(addProductForm.productQuantity.value);
+    const categoryId = `${addProductForm.productCategory.value}`;
+    const sold = 0;
+
+    await fetch('http://localhost:3000/products', {
+      method: 'POST',
+      body: JSON.stringify({
+        id,
+        name,
+        description,
+        price,
+        stockQuantity,
+        categoryId,
+        imageUrl,
+        sold,
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    closeAddProduct();
+    await renderProducts();
+    document.getElementById('productsTab').click();
+  }
+};
+
+addProductForm.addEventListener('submit', addNewProduct);
+
+const categorySelect = document.querySelector('#productCategory');
+const loadCategories = async () => {
+  const res = await fetch('http://localhost:3000/categories');
+  const categories = await res.json();
+
+  categorySelect.innerHTML = ''; // Clear existing options
+  categories.forEach((cat) => {
+    const option = document.createElement('option');
+    option.value = cat.id; // store category ID
+    option.textContent = cat.name; // show category name
+    categorySelect.appendChild(option);
+  });
+};
+
+// Call this when page loads
+loadCategories();
+
+// Modal overlay element for delete confirmation popup
+const productDeleteModal = document.querySelector(
+  '.modal-overlay-product-delete',
+);
+
+// Paragraph/span where the confirmation message will be shown
+const productDeleteMessage = document.querySelector('#productDeleteMessage');
+
+// Button that confirms deletion
+const productConfirmDeleteBtn = document.getElementById(
+  'productConfirmDeleteBtn',
+);
+let productIdToDelete = null;
+
+productConfirmDeleteBtn.addEventListener('click', async (e) => {
+  if (!productIdToDelete) return;
+
+  // ================================
+  // Delete category from json-server
+  // ================================
+  await fetch(`http://localhost:3000/products/${productIdToDelete}`, {
+    method: 'DELETE',
+  });
+
+  // Close modal and refresh categories table
+  closeProductDeleteModal();
+  await renderProducts();
+});
+
+function openProductDeleteModal(id, name) {
+  // Store category ID for later use when confirming deletion
+  productIdToDelete = id;
+
+  // Set confirmation message dynamically
+  productDeleteMessage.textContent = `Are you sure you want to delete "${name}"?`;
+
+  // Show the modal
+
+  productDeleteModal.style = 'display: flex';
+}
+
+function closeProductDeleteModal() {
+  productIdToDelete = null;
+  productDeleteModal.style = 'display: none';
+}
+
+const updateProductModal = document.querySelector(
+  '.modal-overlay-product-update',
+);
+const updateProductForm = document.getElementById('updateProductForm');
+
+async function openProductUpdateModal(
+  id,
+  name,
+  description,
+  price,
+  stockQuantity,
+  imageUrl,
+  categoryId,
+) {
+  const categorySelect = document.getElementById('productCategory2');
+
+  const res = await fetch('http://localhost:3000/categories');
+  const categories = await res.json();
+
+  categories.forEach((cat) => {
+    const option = document.createElement('option');
+    option.value = cat.id; // store category ID
+    option.textContent = cat.name; // show category name
+    categorySelect.appendChild(option);
+  });
+
+  // Set form values
+  updateProductForm.productName.value = name;
+  updateProductForm.productDescription.value = description;
+  updateProductForm.productPrice.value = Number(price);
+  updateProductForm.productQuantity.value = Number(stockQuantity);
+  updateProductForm.productCategory.value = categoryId;
+  updateProductForm.productImage.value = '';
+
+  updateProductForm.dataset.productId = id;
+
+  // Show the modal
+  updateProductModal.style = 'display: flex';
+}
+
+function closeProductUpdateModal() {
+  updateProductModal.style = 'display: none';
+}
+
+updateProductForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const id = updateProductForm.dataset.productId;
+  const name = updateProductForm.productName.value;
+  const categoryId = updateProductForm.productCategory.value;
+  const price = Number(updateProductForm.productPrice.value);
+  const stockQuantity = Number(updateProductForm.productQuantity.value);
+  const description = updateProductForm.productDescription.value;
+  const imageUrl = updateProductForm.productImage.value;
+
+  await fetch(`http://localhost:3000/products/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      name,
+      categoryId,
+      price,
+      stockQuantity,
+      description,
+      imageUrl,
+      sold: 0,
+    }),
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  closeProductUpdateModal();
+  await renderProducts();
+});
+
+///////////////////////////////////////////////////////////////
+////////////////////// Orders Logic ///////////////////////
+////////////////////////////////////////////////////////////
+
+const ordersTap = document.getElementById('ordersTap');
+const ordersTableBody = document.getElementById('orders-container');
+const totalOrders = document.getElementById('totalOrders');
+
+ordersTap.addEventListener('click', async () => {
+  const res = await fetch('http://localhost:3000/cart');
+  const orders = await res.json();
+  ordersTableBody.innerHTML = '';
+  var count = 1;
+  var pendingOrders = orders.filter((order) => order.status === 'pending');
+  totalOrders.textContent = pendingOrders.length;
+  if (pendingOrders.length === 0) {
+    document.querySelector('.empty-table').style.display = 'block';
+    return;
+  } else {
+    document.querySelector('.empty-table').style.display = 'none';
+  }
+  pendingOrders.forEach((order) => {
+    const row = document.createElement('tr');
+    const totalPrice = Number(order.price) * Number(order.quantity);
+    row.innerHTML = `
+      <td>${count++}</td>
+      <td>${order.customerName}</td>
+      <td>${order.productName}</td>
+      <td>${order.quantity}</td>
+      <td>$${totalPrice}</td>
+      <td>${order.status}</td>
+      <td class="actions">
+        <button class="confirm-btn" onclick="confirmOrder('${order.id}')">Confirm</button>
+        <button class="reject-btn" onclick="rejectOrder('${order.id}')">Reject</button>
+      </td>
+    `;
+    ordersTableBody.appendChild(row);
+  });
+});
+
+window.confirmOrder = async (orderId) => {
+  await fetch(`http://localhost:3000/cart/${orderId}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ status: 'confirmed' }),
+    headers: { 'Content-Type': 'application/json' },
+  });
+  ordersTap.click();
+};
+
+window.rejectOrder = async (orderId) => {
+  await fetch(`http://localhost:3000/cart/${orderId}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ status: 'rejected' }),
+    headers: { 'Content-Type': 'application/json' },
+  });
+  ordersTap.click();
+};
+
+///////////////////////////////////////////////////////////////
+////////////////////// Logout Logic ///////////////////////
+////////////////////////////////////////////////////////////
+
+const logoutTap = document.getElementById('logout');
+logoutTap.addEventListener('click', () => {
+  window.location.replace('http://127.0.0.1:5500/Auth/login/login.html');
+  localStorage.removeItem('userName');
+});
+
+//====================================================================================
 const tabs = document.querySelectorAll('.taps .tap');
 const pages = document.querySelectorAll('.sideTab');
 
@@ -392,7 +759,7 @@ function activateTab(pageId) {
   // save state
   localStorage.setItem('activeTab', pageId);
 
-  if(pageId == 'categories'){
+  if (pageId == 'categories') {
     renderCaterogries();
   }
 }

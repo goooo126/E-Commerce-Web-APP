@@ -19,197 +19,495 @@
     }
   </style>
   <body>
-    <!-- Start aside bar -->
-    <aside class="sidebar">
-      <div class="logo">
-        <h3>LOGO</h3>
+    <!-- ===== Header ===== -->
+    <header class="main-header">
+      <div class="header-left">
+        <i class="fa-solid fa-bag-shopping header-icon"></i>
+        <span class="project-name">E-Commerce</span>
       </div>
-      <div class="taps">
-        <div class="tap active" data-page="dashboard">
-          <div class="icon"><i class="fa-solid fa-grip"></i></div>
-          <h3 class="tap-title">Dashboard</h3>
-        </div>
 
-        <div class="tap" data-page="orders">
-          <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
-          <h3 class="tap-title">Orders</h3>
-        </div>
+      <div class="header-right">
+        <i class="fa-solid fa-user"></i>
+        <span class="user-name">George Adly</span>
+      </div>
+    </header>
+    <!-- ===== End Header ===== -->
+    <div class="main-content">
+      <!-- Start aside bar -->
+      <div class="asideContainer">
+        <div>
+          <aside class="sidebar">
+            <div class="taps">
+              <div class="tap" id="ordersTap" data-page="orders">
+                <div class="icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <h3 class="tap-title">Orders</h3>
+              </div>
 
-        <div class="tap" data-page="products">
-          <div class="icon"><i class="fa-solid fa-box"></i></div>
-          <h3 class="tap-title">Products</h3>
-        </div>
+              <div class="tap" id="productsTab" data-page="products">
+                <div class="icon"><i class="fa-solid fa-box"></i></div>
+                <h3 class="tap-title">Products</h3>
+              </div>
 
-        <div class="tap" id="categoryTab" data-page="categories">
-          <div class="icon"><i class="fa-solid fa-tags"></i></div>
-          <h3 id="c" class="tap-title">Categories</h3>
+              <div class="tap" id="categoryTab" data-page="categories">
+                <div class="icon"><i class="fa-solid fa-tags"></i></div>
+                <h3 class="tap-title">Categories</h3>
+              </div>
+            </div>
+          </aside>
         </div>
-
         <div class="tap" id="logout" data-page="logout">
           <div class="icon"><i class="fa-solid fa-power-off"></i></div>
           <a href="../../Login/index2.html"><h3 class="tap-title">Logout</h3></a>
         </div>
       </div>
-    </aside>
-    <!-- End aside bar -->
 
-    <!-- Start Main content -->
-    <main class="content">
-      <!-- Start Dashboard Content -->
-      <section id="dashboard" class="sideTab active">Dashboard Content</section>
-      <!-- End Dashboard Content -->
+      <!-- End aside bar -->
 
-      <!-- Start Orders Content -->
-      <section id="orders" class="sideTab">Orders Content</section>
-      <!-- End Orders Content -->
+      <!-- Start Main content -->
+      <main class="content">
+        <!-- Start Orders Content -->
+        <section id="orders" class="sideTab">
+          <div class="orders-header">
+            <h2>Orders</h2>
+          </div>
+          <hr />
 
-      <!-- Start Products Content -->
-      <section id="products" class="sideTab">Products Content</section>
-      <!-- End Products Content -->
-
-      <!-- Start Categories Content -->
-      <section id="categories" class="sideTab">
-        <!-- Title -->
-        <div class="categories-header">
-          <h2>Caterories</h2>
-          <button class="categoryBtn" onclick="openModal()">
-            <i class="fa-solid fa-plus"></i><span>Add Category</span>
-          </button>
-        </div>
-        <hr />
-
-        <!-- Start Add new Category -->
-        <div class="modal-overlay" id="addCategoryModal">
-          <div class="modal">
-            <h3>Add New Category</h3>
-
-            <form id="addCategoryForm">
-              <div class="form-group">
-                <label>Category Name*</label>
+          <!-- Search section -->
+          <div class="orders-search">
+            <div class="totalOrders">
+              Total Pending Orders: <span id="totalOrders"></span>
+            </div>
+            <form class="orderSearchForm">
+              <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <input
                   type="text"
-                  id="categoryName"
-                  name="CatergoryName"
-                  oninput="validation(this)" />
-                <span></span>
-              </div>
-
-              <div class="form-group">
-                <label>Description*</label>
-                <textarea
-                  id="categoryDescription"
-                  oninput="validation(this)"
-                  rows="3"
-                  name="CategoryDescription"></textarea>
-                <span></span>
-              </div>
-
-              <div class="modal-actions">
-                <button type="button" class="btn cancel" onclick="closeModal()">
-                  Cancel
-                </button>
-                <button type="submit" class="btn save">Save</button>
+                  name="search"
+                  placeholder="search Orders ..." />
               </div>
             </form>
           </div>
-        </div>
-        <!-- End Add new Category -->
+          <!-- Table of orders -->
 
-        <!-- Search section -->
-        <div class="category-search">
-          <div class="totalCategories">
-            Total Categories: <span id="totalCate"></span>
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Customer Name</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody id="orders-container">
+              <!-- inject orders here from js -->
+            </tbody>
+          </table>
+
+          <div class="empty-table">
+            <p>No pending orders available.</p>
           </div>
-          <form class="categorySearchForm">
-            <div class="search-input">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input
-                type="text"
-                name="search"
-                placeholder="search Caterories..." />
-            </div>
-          </form>
-        </div>
+        </section>
+        <!-- End Orders Content -->
 
-        <!-- Table of categories -->
-
-        <table class="categories-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Category Name</th>
-              <th>Description</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-
-          <tbody id="caterogy-container">
-            <!-- inject caterogies here from js -->
-          </tbody>
-        </table>
-        <!-- ===== Delete Confirmation Modal ===== -->
-        <div class="modal-overlay-delete">
-          <div id="deleteCategoryModal" class="modal">
-            <div class="modal-content">
-              <h3>Delete Category</h3>
-              <p id="deleteMessage">
-                Are you sure you want to delete this category?
-              </p>
-
-              <div class="modal-actions">
-                <button type="button" id="confirmDeleteBtn" class="btn danger">Delete</button>
-                <button type="button" onclick="closeDeleteModal()" class="btn cancel">
-                  Cancel
-                </button>
-              </div>
-            </div>
+        <!-- Start Products Content -->
+        <section id="products" class="sideTab">
+          <div class="products-header">
+            <h2>Products</h2>
+            <button class="productBtn">
+              <i class="fa-solid fa-plus"></i><span>Add Product</span>
+            </button>
           </div>
-        </div>
+          <hr />
 
-        <!-- Start Update Category -->
-        <div class="modal-overlay-update" id="UpdateCategoryModal">
-          <div class="modal">
-            <h3>Update Category</h3>
-
-            <form id="updateCategoryForm">
-              <div class="form-group">
-                <label>Category Name*</label>
+          <!-- Search section -->
+          <div class="product-search">
+            <div class="totalProducts">
+              Total Products: <span id="totalPro"></span>
+            </div>
+            <form class="productSearchForm">
+              <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <input
                   type="text"
-                  id="categoryName"
-                  name="CatergoryName"
-                  oninput="validation(this)" />
-                <span></span>
-              </div>
-
-              <div class="form-group">
-                <label>Description*</label>
-                <textarea
-                  id="categoryDescription"
-                  oninput="validation(this)"
-                  rows="3"
-                  name="CategoryDescription"></textarea>
-                <span></span>
-              </div>
-
-              <div class="modal-actions">
-                <button
-                  type="button"
-                  class="btn cancel"
-                  onclick="closeUpdateModal()">
-                  Cancel
-                </button>
-                <button type="submit" class="btn save">Update</button>
+                  name="search"
+                  placeholder="search Products ..." />
               </div>
             </form>
           </div>
-        </div>
-        <!-- End Update Category -->
-      </section>
-      <!-- End Categories Content -->
-    </main>
-    <!-- End Main content -->
 
+          <!-- Start Add new Category -->
+          <div class="modal-overlay" id="addProductModal">
+            <div class="modal">
+              <h3>Add New Product</h3>
+
+              <form id="addProductForm">
+                <div class="form-group">
+                  <label>Product Name*</label>
+                  <input
+                    type="text"
+                    id="productName"
+                    name="productName"
+                    oninput="validation(this)" />
+                  <span></span>
+                </div>
+
+                <div class="form-group">
+                  <label>Product Description*</label>
+                  <textarea
+                    id="productDescription"
+                    oninput="validation(this)"
+                    rows="3"
+                    name="productDescription"></textarea>
+                  <span></span>
+                </div>
+
+                <div class="two-input-group">
+                  <div class="form-group">
+                    <label>Product Price*</label>
+                    <input
+                      type="number"
+                      id="productPrice"
+                      name="productPrice"
+                      oninput="validation(this)" />
+                    <span></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Product Quantity*</label>
+                    <input
+                      type="number"
+                      id="productQuantity"
+                      name="productQuantity"
+                      oninput="validation(this)" />
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Product Image*</label>
+                  <input
+                    type="file"
+                    id="productImage"
+                    name="productImage"
+                    accept="image/*"
+                    required />
+                  <span></span>
+                </div>
+
+                <div class="form-group">
+                  <label>Category*</label>
+                  <select id="productCategory" name="productCategory" required>
+                    <option value="">Select Category</option>
+                    <!-- Options will be injected dynamically -->
+                  </select>
+                  <span></span>
+                </div>
+
+                <div class="modal-actions">
+                  <button
+                    type="button"
+                    class="btn cancel"
+                    onclick="closeAddProduct()">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn save">Save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Add new Category -->
+
+          <!-- Table of products -->
+
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sold</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody id="product-container">
+              <!-- inject Products here from js -->
+            </tbody>
+          </table>
+
+          <!-- ===== Delete Confirmation Modal ===== -->
+          <div class="modal-overlay-product-delete">
+            <div id="deleteProductModal" class="modal">
+              <div class="modal-content">
+                <h3>Delete Product</h3>
+                <p id="productDeleteMessage">
+                  Are you sure you want to delete this Product?
+                </p>
+
+                <div class="modal-actions">
+                  <button
+                    type="button"
+                    id="productConfirmDeleteBtn"
+                    class="btn danger">
+                    Delete
+                  </button>
+                  <button
+                    type="button"
+                    onclick="closeProductDeleteModal()"
+                    class="btn cancel">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Start Update Category -->
+          <div class="modal-overlay-product-update" id="UpdateProductModal">
+            <div class="modal">
+              <h3>Update Product</h3>
+
+              <form id="updateProductForm">
+                <div class="form-group">
+                  <label>Product Name*</label>
+                  <input
+                    type="text"
+                    id="productName"
+                    name="productName"
+                    oninput="validation(this)" />
+                  <span></span>
+                </div>
+
+                <div class="form-group">
+                  <label>Product Description*</label>
+                  <textarea
+                    id="productDescription"
+                    oninput="validation(this)"
+                    rows="3"
+                    name="productDescription"></textarea>
+                  <span></span>
+                </div>
+
+                <div class="two-input-group">
+                  <div class="form-group">
+                    <label>Product Price*</label>
+                    <input
+                      type="number"
+                      id="productPrice"
+                      name="productPrice"
+                      oninput="validation(this)" />
+                    <span></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Product Quantity*</label>
+                    <input
+                      type="number"
+                      id="productQuantity"
+                      name="productQuantity"
+                      oninput="validation(this)" />
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Product Image*</label>
+                  <input
+                    type="file"
+                    id="productImage"
+                    name="productImage"
+                    accept="image/*"
+                    required />
+                  <span></span>
+                </div>
+
+                <div class="form-group">
+                  <label>Category*</label>
+                  <select id="productCategory2" name="productCategory" required>
+                    <option value="">Select Category</option>
+                    <!-- Options will be injected dynamically -->
+                  </select>
+                  <span></span>
+                </div>
+
+                <div class="modal-actions">
+                  <button
+                    type="button"
+                    class="btn cancel"
+                    onclick="closeProductUpdateModal()">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn save">Update</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Update Category -->
+        </section>
+        <!-- End Products Content -->
+
+        <!-- Start Categories Content -->
+        <section id="categories" class="sideTab">
+          <!-- Title -->
+          <div class="categories-header">
+            <h2>Caterories</h2>
+            <button class="categoryBtn" onclick="openModal()">
+              <i class="fa-solid fa-plus"></i><span>Add Category</span>
+            </button>
+          </div>
+          <hr />
+
+          <!-- Start Add new Category -->
+          <div class="modal-overlay" id="addCategoryModal">
+            <div class="modal">
+              <h3>Add New Category</h3>
+
+              <form id="addCategoryForm">
+                <div class="form-group">
+                  <label>Category Name*</label>
+                  <input
+                    type="text"
+                    id="categoryName"
+                    name="CatergoryName"
+                    oninput="validation(this)" />
+                  <span></span>
+                </div>
+
+                <div class="form-group">
+                  <label>Description*</label>
+                  <textarea
+                    id="categoryDescription"
+                    oninput="validation(this)"
+                    rows="3"
+                    name="CategoryDescription"></textarea>
+                  <span></span>
+                </div>
+
+                <div class="modal-actions">
+                  <button
+                    type="button"
+                    class="btn cancel"
+                    onclick="closeModal()">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn save">Save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Add new Category -->
+
+          <!-- Search section -->
+          <div class="category-search">
+            <div class="totalCategories">
+              Total Categories: <span id="totalCate"></span>
+            </div>
+            <form class="categorySearchForm">
+              <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                  type="text"
+                  name="search"
+                  placeholder="search Caterories..." />
+              </div>
+            </form>
+          </div>
+
+          <!-- Table of categories -->
+
+          <table class="categories-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Category Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody id="caterogy-container">
+              <!-- inject caterogies here from js -->
+            </tbody>
+          </table>
+          <!-- ===== Delete Confirmation Modal ===== -->
+          <div class="modal-overlay-delete">
+            <div id="deleteCategoryModal" class="modal">
+              <div class="modal-content">
+                <h3>Delete Category</h3>
+                <p id="deleteMessage">
+                  Are you sure you want to delete this category?
+                </p>
+
+                <div class="modal-actions">
+                  <button
+                    type="button"
+                    id="confirmDeleteBtn"
+                    class="btn danger">
+                    Delete
+                  </button>
+                  <button
+                    type="button"
+                    onclick="closeDeleteModal()"
+                    class="btn cancel">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Start Update Category -->
+          <div class="modal-overlay-update" id="UpdateCategoryModal">
+            <div class="modal">
+              <h3>Update Category</h3>
+
+              <form id="updateCategoryForm">
+                <div class="form-group">
+                  <label>Category Name*</label>
+                  <input
+                    type="text"
+                    id="categoryName"
+                    name="CatergoryName"
+                    oninput="validation(this)" />
+                  <span></span>
+                </div>
+
+                <div class="form-group">
+                  <label>Description*</label>
+                  <textarea
+                    id="categoryDescription"
+                    oninput="validation(this)"
+                    rows="3"
+                    name="CategoryDescription"></textarea>
+                  <span></span>
+                </div>
+
+                <div class="modal-actions">
+                  <button
+                    type="button"
+                    class="btn cancel"
+                    onclick="closeUpdateModal()">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn save">Update</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Update Category -->
+        </section>
+        <!-- End Categories Content -->
+      </main>
+      <!-- End Main content -->
+    </div>
     <!-- The File of Java script -->
     <script src="logic.js"></script>
   </body>

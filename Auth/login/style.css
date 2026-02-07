@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+
+:root {
+  --sidebar-color: #fbf6f6;
+  --body-color: #ffffff;
+  --primary-color: #e8dede;
+  --primary-color-light: #f3ecec;
+  --text-color: #4a4a4a;
+  --logo-color: #7065f5;
+  --danger-color: #d94a4a;
+}
+
+* {
+  box-sizing: border-box;
+      font-family: "Italiana", serif;
+
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--sidebar-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 360px;
+  background: var(--body-color);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h1 {
+  text-align: center;
+  color: var(--logo-color);
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 400;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color-light);
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--logo-color);
+  background: #fff;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: var(--logo-color);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.error {
+  color: var(--danger-color);
+  font-size: 13px;
+  margin-top: 5px;
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+.center a {
+  color: var(--logo-color);
+  text-decoration: none;
+}
